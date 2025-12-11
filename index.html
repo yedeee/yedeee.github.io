@@ -8,12 +8,12 @@
   <style>
     /* Load your custom font from the fonts folder */
 @font-face {
-  font-family: "Antipol VF";
+  font-family: "Antipol Variable";
   src: url("fonts/Antipol VF.ttf") format("truetype");
 }
 
     body {
-      font-family: "Antipol VF", sans-serif;
+      font-family: "Antipol Variable", sans-serif;
       font-stretch: 100%;
       background: #f5f5f5;
       margin: 0;
@@ -31,7 +31,8 @@
 
       /* Your requested stretch + narrow width */
       font-stretch: 150%;
-      font-variation-settings: "wdth" 0; /* narrowest width, if supported */
+      font-variation-settings: "wdth" 250, "wght" 700;
+     /* optional — some browsers respond to both */
     }
 
     .link-box {
