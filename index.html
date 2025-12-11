@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>yedeee</title>
+
   <style>
+    /* Load your custom font from the fonts folder */
+    @font-face {
+      font-family: "Stuff";
+      src: url("fonts/Stuff.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      font-stretch: 100%; /* Supports variable-stretch fonts */
+      font-family: "Stuff", sans-serif;
+      font-stretch: 100%;
       background: #f5f5f5;
       margin: 0;
       display: flex;
@@ -20,12 +29,16 @@
     h1 {
       font-size: 3rem;
       color: #222;
-      margin-bottom: 20px; /* smaller gap */
+      margin-bottom: 20px;
+
+      /* Your requested stretch + narrow width */
+      font-stretch: 150%;
+      font-variation-settings: "wdth" 0; /* narrowest width, if supported */
     }
 
     .link-box {
       background: white;
-      border: 5px solid #c7c7c7; /* thicker border */
+      border: 5px solid #c7c7c7;
       border-radius: 10px;
       padding: 40px 30px;
       width: 280px;
