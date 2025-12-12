@@ -18,19 +18,21 @@
 body {
     font-family: "Antipol Variable", sans-serif;
     font-variation-settings: 
-        "wdth" 250,   /* Adobe preview wide width */
-        "wght" 700;   /* Medium-bold like preview */
+        "wdth" 250,
+        "wght" 700;
 
     background: #ff4f58;
     color: #2c1d56;
 
     margin: 0;
-    padding: 40px;
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center; /* vertical centering */
+    align-items: center;     /* horizontal centering */
+    text-align: center;      /* center text */
 }
-
 /* Title: same axes, but slightly heavier for emphasis */
 h1 {
     font-variation-settings:
