@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>yedeee</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yedeee</title>
 
-  <style>
-    /* Load your custom font from the fonts folder */
+<style>
+/* Load your variable font */
 @font-face {
-  font-family: "Antipol Variable";
-  src: url("fonts/Antipol VF.ttf") format("truetype");
+    font-family: "Antipol Variable";
+    src: url("fonts/Antipol VF Regular 2.ttf") format("truetype");
+    font-weight: 1 1000;
+    font-stretch: 50% 200%;
+    font-style: normal;
 }
 
-    body {
-      font-family: "Antipol Variable", sans-serif;
-      font-stretch: 100%;
-      background: #ff4f58;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+/* Page setup */
+body {
+    font-family: "Antipol Variable", sans-serif;
+    background: #ff4f58;
+    color: #2c1d56;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    h1 {
-      font-size: 3rem;
-      color: #2c1d56;
-      margin-bottom: 20px;
+/* Title with stretched width */
+h1 {
+    margin-bottom: 10px;
+    font-family: "Antipol Variable", sans-serif;
+    font-weight: 700;
+    font-stretch: 150%;
+    font-variation-settings:
+        "wdth" 50,
+        "wght" 700;
+    color: #2c1d56;
+}
 
-      /* Your requested stretch + narrow width */
-      font-stretch: 300%;
-      font-variation-settings: "wdth" 400, "wght" 230;
-     /* optional — some browsers respond to both */
-    }
+/* The link box */
+.box {
+    border: 5px solid #bbb;
+    padding: 30px 50px;
+    background: white;
+    border-radius: 12px;
+    width: 300px;
+}
 
-    .link-box {
-      background: #ff4f58;
-      border: 5px solid #2c1d56;
-      border-radius: 10px;
-      padding: 40px 30px;
-      width: 280px;
-      height: 420px;
-      display: flex;
-      align-items: flex-start;
-    }
+/* List and link styles */
+.box ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #2c1d56;
+}
 
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin: 0;
-    }
+.box li {
+    margin-bottom: 10px;
+}
 
-    li {
-      margin: 12px 0;
-    }
+.box a {
+    color: #2c1d56;
+    text-decoration: none;
+}
 
-    a {
-      text-decoration: none;
-      color: #2c1d56;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #0044aa;
-    }
-  </style>
+.box a:hover {
+    text-decoration: underline;
+}
+</style>
 </head>
+
 <body>
 
-  <h1>yedeee</h1>
+<h1>yedeee</h1>
 
-  <div class="link-box">
+<div class="box">
     <ul>
-      <li><a href="https://yedeee.github.io/ryuunicode">Ryuunicode</a></li>
-      <li><a href="#link2">Second Link</a></li>
-      <li><a href="#link3">Third Link</a></li>
-      <li><a href="#link4">Fourth Link</a></li>
+        <li><a href="https://yedeee.github.io/ryuunicode">Ryuunicode</a></li>
+        <li><a href="#">Second Link</a></li>
+        <li><a href="#">Third Link</a></li>
+        <li><a href="#">Fourth Link</a></li>
     </ul>
-  </div>
+</div>
 
 </body>
 </html>
