@@ -13,11 +13,17 @@
     font-weight: 1 1000;
     font-style: normal;
 }
-/* Page setup */
+
+/* Global style: everything uses the Adobe-style axis settings */
 body {
     font-family: "Antipol Variable", sans-serif;
+    font-variation-settings: 
+        "wdth" 250,   /* Adobe preview wide width */
+        "wght" 700;   /* Medium-bold like preview */
+
     background: #ff4f58;
     color: #2c1d56;
+
     margin: 0;
     padding: 40px;
     display: flex;
@@ -25,26 +31,25 @@ body {
     align-items: center;
 }
 
-/* Title with stretched width */
+/* Title: same axes, but slightly heavier for emphasis */
 h1 {
-    margin-bottom: 10px;
-    font-family: "Antipol Variable", sans-serif;
     font-variation-settings:
-        "wdth" 50,
-        "wght" 700;
+        "wdth" 250,
+        "wght" 750;
+    margin-bottom: 10px;
     color: #2c1d56;
 }
 
-/* The link box */
+/* Box styling */
 .box {
     border: 5px solid #2c1d56;
     padding: 30px 50px;
-    background: #ff4f58;
+    background: white;
     border-radius: 12px;
     width: 300px;
 }
 
-/* List and link styles */
+/* List + links inherit the font settings */
 .box ul {
     margin: 0;
     padding-left: 20px;
