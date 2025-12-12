@@ -43,10 +43,13 @@ h1 {
 /* Box styling */
 .box {
     border: 5px solid #2c1d56;
-    padding: 30px 50px;
+    padding: 30px 20px;   /* smaller padding on phone */
     background: white;
     border-radius: 12px;
-    width: 300px;
+
+    width: 100%;          /* take full width of phone */
+    max-width: 340px;     /* stays nice on desktop */
+    box-sizing: border-box; /* ensures padding doesn't push width over 100% */
 }
 
 /* List + links inherit the font settings */
