@@ -40,7 +40,7 @@ h1 {
         "wght" 900;
     margin-bottom: 10px;
     color: #2c1d56;
-    animation: titleMove 0.8s ease-out forwards;
+    animation: titleMove 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Box styling */
@@ -53,9 +53,9 @@ h1 {
     width: 100%;          /* take full width of phone */
     max-width: 340px;     /* stays nice on desktop */
     box-sizing: border-box; /* ensures padding doesn't push width over 100% */
-    opacity: 0; /* start hidden */
+    opacity: 0;
     animation: boxFade 0.8s ease-out forwards;
-    animation-delay: 0.5s; /* box appears after title moves */
+    animation-delay: 2.6s; /* starts after title finishes */
 }
 
 /* List + links inherit the font settings */
@@ -81,12 +81,16 @@ h1 {
 
 /* Intro animations */
 @keyframes titleMove {
-    from {
+    0% {
         transform: translateY(40px);
-        opacity: 0;
+        opacity: 1;
     }
-    to {
-        transform: translateY(0);
+    60% {
+        transform: translateY(40px); /* stay centered */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0); /* final position */
         opacity: 1;
     }
 }
@@ -99,6 +103,14 @@ h1 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    h1, .box {
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 }
 
