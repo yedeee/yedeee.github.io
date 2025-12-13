@@ -83,14 +83,14 @@ h1 {
 @keyframes titleMove {
     0% {
         transform: translateY(40px);
-        opacity: 1;
+        opacity: 0;
     }
     60% {
         transform: translateY(40px); /* stay centered */
-        opacity: 1;
+        opacity: 1;                 /* fade-in completed */
     }
     100% {
-        transform: translateY(0); /* final position */
+        transform: translateY(0);   /* move to final position */
         opacity: 1;
     }
 }
