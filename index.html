@@ -40,6 +40,7 @@ h1 {
         "wght" 900;
     margin-bottom: 10px;
     color: #2c1d56;
+    animation: titleMove 0.8s ease-out forwards;
 }
 
 /* Box styling */
@@ -52,6 +53,9 @@ h1 {
     width: 100%;          /* take full width of phone */
     max-width: 340px;     /* stays nice on desktop */
     box-sizing: border-box; /* ensures padding doesn't push width over 100% */
+    opacity: 0; /* start hidden */
+    animation: boxFade 0.8s ease-out forwards;
+    animation-delay: 0.5s; /* box appears after title moves */
 }
 
 /* List + links inherit the font settings */
@@ -74,6 +78,30 @@ h1 {
 .box a:hover {
     text-decoration: underline;
 }
+
+/* Intro animations */
+@keyframes titleMove {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes boxFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 </style>
 </head>
 
